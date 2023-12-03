@@ -1,0 +1,18 @@
+-r
+C:\Users\4885226\source\repos\B&S_AOS\B&S_AOS\Intel® VTune™ Profiler Results\B&S_AOS\r001hs
+--stack-stitching
+--data-limit-mb=1000
+--disk-space-limit=0
+--mrte-type=java,dotnet,python
+--stack-unwind-limit=8388608
+--itt-config=frame
+--itt-config=task,event,counter
+--stackwalk=offline
+--mrte-mode=auto
+--type=cpu:counters:nostack
+--type=cpu:stack
+--interval=10
+--app-working-dir=C:\Users\4885226\source\repos\B&S_AOS\B&S_AOS\
+--
+C:\Users\4885226\source\repos\B&S_AOS\x64\Release\B&S_AOS.exe
+100000000
