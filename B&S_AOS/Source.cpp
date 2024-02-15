@@ -48,14 +48,14 @@ int main(int argc, char* argv[])
 	Get_option_price(mas, N);
 	const std::chrono::time_point<std::chrono::system_clock> t2 = std::chrono::system_clock::now();
 	auto time = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
-	std::cout << " The option price has been calculated!" << std::endl;
+	std::cout << " Цена опциона вычислена!" << std::endl;
 
 	for (size_t i = 0; i < N; i++)
 	{
 
 		Price += mas[i].Get_out_price();
 	}
-	std::cout << "The fair option price for all shares: " << Price << "$" << std::endl;
-	std::cout << "Elapsed time:" << time << " ms" << std::endl;
+	std::cout << "Справедливая цена опциона = " << Price << "$" << std::endl;
+	std::cout << "На вычисление затрачено:" << time << " ms" << std::endl;
 	delete[]  mas;
 }
