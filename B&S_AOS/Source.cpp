@@ -21,8 +21,16 @@ int main(int argc, char* argv[])
 		}
 		N = std::atoi(argv[1]);
 	}
-	/*std::cout << "Enter the size of array of structures:" << std::endl;
-	std::cin >> N;*/
+	const char* num_threads_str = std::getenv("OMP_NUM_THREADS");//возвращает указатель на переменную окружения.
+	int num_threads;
+	if (num_threads_str != nullptr) {
+		 num_threads = std::atoi(num_threads_str);
+		std::cout <<"Значение переменной окружения OMP_NUM_THREADS: " << num_threads << std::endl;
+	}
+	else {
+		std::cout << "Переменная окружения OMP_NUM_THREADS не установлена" << std::endl;
+	}
+
 	mas = new Option[N];
 	Functor_for_array FUNC;
 	if (N >= 10)

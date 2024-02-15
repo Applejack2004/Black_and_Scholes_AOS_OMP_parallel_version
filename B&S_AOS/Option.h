@@ -31,7 +31,6 @@ public:
 
 	float Get_out_price()
 	{
-
 		return C;
 	}
 	friend std::istream& operator>>(std::istream& is, Option& op)
@@ -43,10 +42,6 @@ public:
 		is >> op.K;
 		std::cout << "Enter the time" << std::endl;
 		is >> op.T;
-
-
-
-
 		return is;
 
 	}

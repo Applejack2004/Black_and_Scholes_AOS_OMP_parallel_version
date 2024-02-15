@@ -1,0 +1,1069 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<bag xmlns:boolean="http://www.w3.org/2001/XMLSchema#boolean" xmlns:float="http://www.w3.org/2001/XMLSchema#float" xmlns:int="http://www.w3.org/2001/XMLSchema#int" xmlns:unsignedInt="http://www.w3.org/2001/XMLSchema#unsignedInt" xmlns:unsignedLong="http://www.w3.org/2001/XMLSchema#unsignedLong" int:version="16">
+ <issues>
+  <issue>
+   <unsignedInt:flags>69</unsignedInt:flags>
+   <id>issue_assumed_dependency</id>
+   <int:severity>2</int:severity>
+   <text>The compiler assumed there is an anti-dependency (Write after read - WAR) or true dependency (Read after write - RAW) in the loop. Improve performance by investigating the assumption and handling accordingly. </text>
+   <title>Assumed dependency present </title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_assumed_dependency_run_correctness_c</id>
+     <text/>
+     <title>Confirm dependency is real </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:no_dependency_disclaimer>true</boolean:no_dependency_disclaimer>
+     </parameters>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>6</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>321</unsignedInt:flags>
+   <id>issue_roofline_guidance</id>
+   <int:severity>2</int:severity>
+   <text/>
+   <title>issue_roofline_guidance_title</title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters boolean:is_vectorized="false" zone="mem" ops_type="int"/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_roofline_guidance_memory_bound</id>
+     <text>roofline_guidance_memory_bound_text</text>
+     <title>This loop is mostly memory bound </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:is_vectorized>false</boolean:is_vectorized>
+      <boolean:is_fma_dominated>false</boolean:is_fma_dominated>
+      <boolean:scalar_mem_instructions>true</boolean:scalar_mem_instructions>
+      <boolean:inefficient_map>false</boolean:inefficient_map>
+      <boolean:low_vector_efficiency>false</boolean:low_vector_efficiency>
+      <int:limiting_roof>3</int:limiting_roof>
+     </parameters>
+    </recommendation>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_roofline_guidance_collect_all_memory_levels</id>
+     <text>rec_roofline_guidance_collect_text</text>
+     <title>Collect Roofline for all memory levels </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>6</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>66</unsignedInt:flags>
+   <id>compiler_diag_issue_15344</id>
+   <int:severity>1</int:severity>
+   <text>compiler_diag_issue_15344_text</text>
+   <title>compiler_diag_issue_15344_title</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>compiler_diag_rec_15344</id>
+     <text>compiler_diag_rec_15344_text</text>
+     <title>Recommendations </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>6</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>321</unsignedInt:flags>
+   <id>issue_roofline_guidance</id>
+   <int:severity>2</int:severity>
+   <text/>
+   <title>issue_roofline_guidance_title</title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters boolean:is_vectorized="false" zone="mem" ops_type="int"/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_roofline_guidance_memory_bound</id>
+     <text>roofline_guidance_memory_bound_text</text>
+     <title>This loop is mostly memory bound </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:is_vectorized>false</boolean:is_vectorized>
+      <boolean:is_fma_dominated>false</boolean:is_fma_dominated>
+      <boolean:scalar_mem_instructions>true</boolean:scalar_mem_instructions>
+      <boolean:inefficient_map>false</boolean:inefficient_map>
+      <boolean:low_vector_efficiency>false</boolean:low_vector_efficiency>
+      <int:limiting_roof>3</int:limiting_roof>
+     </parameters>
+    </recommendation>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_roofline_guidance_collect_all_memory_levels</id>
+     <text>rec_roofline_guidance_collect_text</text>
+     <title>Collect Roofline for all memory levels </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>8</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>321</unsignedInt:flags>
+   <id>issue_roofline_guidance</id>
+   <int:severity>2</int:severity>
+   <text/>
+   <title>issue_roofline_guidance_title</title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters boolean:is_vectorized="false" zone="mem" ops_type="int"/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_roofline_guidance_memory_bound</id>
+     <text>roofline_guidance_memory_bound_text</text>
+     <title>This loop is mostly memory bound </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:is_vectorized>false</boolean:is_vectorized>
+      <boolean:is_fma_dominated>false</boolean:is_fma_dominated>
+      <boolean:scalar_mem_instructions>true</boolean:scalar_mem_instructions>
+      <traits>Type Conversions</traits>
+      <boolean:inefficient_map>false</boolean:inefficient_map>
+      <boolean:low_vector_efficiency>false</boolean:low_vector_efficiency>
+      <int:limiting_roof>3</int:limiting_roof>
+     </parameters>
+    </recommendation>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_roofline_guidance_collect_all_memory_levels</id>
+     <text>rec_roofline_guidance_collect_text</text>
+     <title>Collect Roofline for all memory levels </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>9</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>65</unsignedInt:flags>
+   <id>issue_type_conversions</id>
+   <int:severity>1</int:severity>
+   <text>There are multiple data types within loops. Utilize hardware vectorization support more effectively by avoiding data type conversion. </text>
+   <title>Data type conversions present </title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_type_conversions_smallest_c</id>
+     <text>The &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;source loop&lt;/a&gt; contains data types of different widths. To fix: Use the smallest data type that gives the needed precision to use the entire &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;vector register width&lt;/a&gt;.
+&lt;/br&gt;&lt;b&gt;Example:&lt;/b&gt; If only 16-bits are needed, using a short rather than an int can make the difference between eight-way or four-way SIMD parallelism, respectively. </text>
+     <title>Use the smallest data type </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>9</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>66</unsignedInt:flags>
+   <id>compiler_diag_issue_15316</id>
+   <int:severity>1</int:severity>
+   <text>&lt;b&gt;Cause:&lt;/b&gt; In nested loop structures, the compiler targets the innermost loop for vectorization. The outer loop, by default, is not a target for vectorization; however, it may be a target for parallelization.&lt;br/&gt; &lt;b&gt;C++ Example:&lt;/b&gt; &lt;div class=&quot;sample&quot;&gt;&lt;br/&gt;
+#include &amp;lt;iostream&amp;gt; &lt;br/&gt;
+#define N 25&lt;br/&gt;
+int main()&lt;br/&gt;
+{&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;int a[N][N], b[N], i;&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;for(int j = 0; j &amp;lt; N; j++)&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;{&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;for(int i = 0; i &amp;lt; N; i++)&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;a[j][i] = 0;&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;b[j] = 1;&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;}&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;int sum = __sec_reduce_add(a[:][:]) + __sec_reduce_add(b[:]);&lt;br/&gt;
+&amp;nbsp;&amp;nbsp;return 0;&lt;br/&gt;
+}&lt;/div&gt; </text>
+   <title>Not inner loop </title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>compiler_diag_rec_15316</id>
+     <text>In some cases it is possible to collapse a nested loop structure into a single loop structure using a directive before the outer loop. The &lt;div class=&quot;inplace_sample&quot;&gt;n&lt;/div&gt; argument is an integer that specifies how many loops to collapse into one loop for vectorization. &lt;table&gt; &lt;tr&gt; &lt;th&gt;Target &lt;/th&gt; &lt;th&gt;&lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;ICL/ICC/ICPC&lt;/a&gt; Directive &lt;/th&gt; &lt;th&gt;&lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;IFORT&lt;/a&gt; Directive &lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Outer loop&lt;/td&gt; &lt;td&gt;#pragma omp simd collapse(n), #pragma omp simd, or #pragma simd&lt;/td&gt; &lt;td&gt;!$OMP SIMD COLLAPSE(n), !$OMP SIMD, or !DIR$ SIMD&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; &lt;b&gt;Read More C++ Information:&lt;/b&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;https://software.intel.com/en-us/articles/cdiag15316&quot;&gt;https://software.intel.com/en-us/articles/cdiag15316&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;C++/17/index.htm#GUID-4D8CDB9C-8A96-4CB2-B5E5-3D81003FE4FF.html&gt;omp simd&lt;/a&gt;, &lt;a href=&quot;C++/17/index.htm#GUID-1EA04294-988E-4152-B584-B028FD6FAC48.html&quot;&gt;simd&lt;/a&gt; &lt;li&gt;&lt;a href=&quot;https://software.intel.com/en-us/articles/getting-started-with-intel-composer-xe-2013-compiler-pragmas-and-directives&quot;&gt;Getting Started with Intel Compiler Pragmas and Directives&lt;/a&gt; and &lt;a href=&quot;https://software.intel.com/en-us/vectorization-resources-advisor&quot;&gt;Vectorization Resources for Intel&amp;reg; Advisor Users&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;  </text>
+     <title>Recommendations </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>9</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>69</unsignedInt:flags>
+   <id>issue_assumed_dependency</id>
+   <int:severity>2</int:severity>
+   <text>The compiler assumed there is an anti-dependency (Write after read - WAR) or true dependency (Read after write - RAW) in the loop. Improve performance by investigating the assumption and handling accordingly. </text>
+   <title>Assumed dependency present </title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_assumed_dependency_run_correctness_c</id>
+     <text/>
+     <title>Confirm dependency is real </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:no_dependency_disclaimer>true</boolean:no_dependency_disclaimer>
+     </parameters>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>10</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>66</unsignedInt:flags>
+   <id>compiler_diag_issue_15344</id>
+   <int:severity>1</int:severity>
+   <text>compiler_diag_issue_15344_text</text>
+   <title>compiler_diag_issue_15344_title</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>compiler_diag_rec_15344</id>
+     <text>compiler_diag_rec_15344_text</text>
+     <title>Recommendations </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>10</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>321</unsignedInt:flags>
+   <id>issue_roofline_guidance</id>
+   <int:severity>2</int:severity>
+   <text/>
+   <title>issue_roofline_guidance_title</title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters boolean:is_vectorized="true" zone="mem" ops_type="int"/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_roofline_guidance_memory_bound</id>
+     <text>roofline_guidance_memory_bound_text</text>
+     <title>This loop is mostly memory bound </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:is_vectorized>true</boolean:is_vectorized>
+      <boolean:is_fma_dominated>false</boolean:is_fma_dominated>
+      <boolean:scalar_mem_instructions>true</boolean:scalar_mem_instructions>
+      <current_isa>SSE</current_isa>
+      <best_isa>AVX2</best_isa>
+      <boolean:inefficient_map>false</boolean:inefficient_map>
+      <boolean:low_vector_efficiency>false</boolean:low_vector_efficiency>
+      <int:limiting_roof>3</int:limiting_roof>
+     </parameters>
+    </recommendation>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_roofline_guidance_collect_all_memory_levels</id>
+     <text>rec_roofline_guidance_collect_text</text>
+     <title>Collect Roofline for all memory levels </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>11</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>69</unsignedInt:flags>
+   <id>issue_check_access_patterns</id>
+   <int:severity>2</int:severity>
+   <text>Inefficient memory access patterns may result in significant vector code execution slowdown or block automatic vectorization by the compiler. Improve performance by investigating. </text>
+   <title>Possible inefficient memory access patterns present </title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_check_access_patterns_run_map_c</id>
+     <text>There is no confirmation inefficient memory access patterns are present. To confirm: Run a &lt;a href=&quot;../help/index.htm#GUID-B98AD81B-4946-4E86-B452-9A1810F4517C.htm&quot;&gt;Memory Access Patterns analysis&lt;/a&gt;. </text>
+     <title>Confirm inefficient memory access patterns </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:no_map_disclaimer>true</boolean:no_map_disclaimer>
+     </parameters>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>12</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>65</unsignedInt:flags>
+   <id>issue_div</id>
+   <int:severity>1</int:severity>
+   <text>div_issue_text</text>
+   <title>Unoptimized floating point operation processing possible</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_sqrt_c</id>
+     <text>add_sqrt_text</text>
+     <title>Enable the use of approximate sqrt instructions </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>12</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>65</unsignedInt:flags>
+   <id>issue_fma</id>
+   <int:severity>1</int:severity>
+   <text>Your current hardware supports the AVX2 instruction set architecture (ISA), which enables the use of fused multiply-add (FMA) instructions. Improve performance by utilizing FMA instructions. </text>
+   <title>Potential underutilization of FMA instructions </title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_fma_target_avx2_isa_c</id>
+     <text>Although static analysis presumes the loop may benefit from FMA instructions available with the AVX2 ISA, no AVX2-specific code executed for this loop. To fix: Use the &lt;div class=&quot;inplace_sample&quot;&gt;xCORE-AVX2&lt;/div&gt; compiler option to generate AVX2-specific code, or the &lt;div class=&quot;inplace_sample&quot;&gt;axCORE-AVX2&lt;/div&gt; compiler option to enable multiple, feature-specific, auto-dispatch code generation, including AVX2. &lt;table&gt; &lt;tr&gt; &lt;th&gt; Windows* OS &lt;/th&gt; &lt;th&gt; Linux* OS &lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;/QxCORE-AVX2 or /QaxCORE-AVX2&lt;/td&gt; &lt;td&gt;-xCORE-AVX2 or -axCORE-AVX2&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; &lt;b&gt;Read More: &lt;/b&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;C++/17/index.htm#GUID-2D881A91-C5D7-4DDD-84B1-FB9D0D597F4D.htm&quot;&gt;ax, Qax&lt;/a&gt;; &lt;a href=&quot;C++/17/index.htm#GUID-09734487-1819-4C1E-B314-2497F2B64C45.htm&quot;&gt;x, Qx&lt;/a&gt;
+&lt;li&gt;&lt;em&gt;Code Generation Options&lt;/em&gt; in the &lt;a href=&quot;https://software.intel.com/en-us/intel-cplusplus-compiler-16.0-user-and-reference-guide&quot;&gt;Intel&amp;reg; C++ Compiler 16.0 User and Reference Guide&lt;/a&gt; &lt;li&gt;&lt;a href=&quot;https://software.intel.com/en-us/blogs/2016/01/13/compiling-for-the-intel-xeon-phi-processor-x200-and-the-intel-avx-512-isa&quot;&gt;Compiling for the Intel&amp;reg; Xeon Phi&amp;trade; processor x200 and the Intel&amp;reg; AVX-512 ISA&lt;/a&gt; and &lt;a href=&quot;https://software.intel.com/en-us/vectorization-resources-advisor&quot;&gt;Vectorization Resources for Intel&amp;reg; Advisor Users&lt;/a&gt; &lt;/ul&gt; </text>
+     <title>Target the AVX2 ISA </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>12</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>321</unsignedInt:flags>
+   <id>issue_roofline_guidance</id>
+   <int:severity>2</int:severity>
+   <text/>
+   <title>issue_roofline_guidance_title</title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters boolean:is_vectorized="false" zone="mem" ops_type="int"/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_roofline_guidance_memory_bound</id>
+     <text>roofline_guidance_memory_bound_text</text>
+     <title>This loop is mostly memory bound </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:is_vectorized>false</boolean:is_vectorized>
+      <boolean:is_fma_dominated>false</boolean:is_fma_dominated>
+      <boolean:scalar_mem_instructions>true</boolean:scalar_mem_instructions>
+      <boolean:inefficient_map>false</boolean:inefficient_map>
+      <boolean:low_vector_efficiency>false</boolean:low_vector_efficiency>
+      <int:limiting_roof>3</int:limiting_roof>
+     </parameters>
+    </recommendation>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_roofline_guidance_collect_all_memory_levels</id>
+     <text>rec_roofline_guidance_collect_text</text>
+     <title>Collect Roofline for all memory levels </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>16</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>66</unsignedInt:flags>
+   <id>compiler_diag_issue_15335</id>
+   <int:severity>1</int:severity>
+   <text>compiler_diag_issue_15335_text</text>
+   <title>compiler_diag_issue_15335_title</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>compiler_diag_rec_15335</id>
+     <text>compiler_diag_rec_15335_text</text>
+     <title>Recommendations </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>16</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>321</unsignedInt:flags>
+   <id>issue_roofline_guidance</id>
+   <int:severity>2</int:severity>
+   <text/>
+   <title>issue_roofline_guidance_title</title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters boolean:is_vectorized="false" zone="mem" ops_type="float"/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_roofline_guidance_memory_bound</id>
+     <text>roofline_guidance_memory_bound_text</text>
+     <title>This loop is mostly memory bound </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:is_vectorized>false</boolean:is_vectorized>
+      <boolean:is_fma_dominated>false</boolean:is_fma_dominated>
+      <boolean:scalar_mem_instructions>false</boolean:scalar_mem_instructions>
+      <boolean:inefficient_map>false</boolean:inefficient_map>
+      <boolean:low_vector_efficiency>false</boolean:low_vector_efficiency>
+      <int:limiting_roof>3</int:limiting_roof>
+     </parameters>
+    </recommendation>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_roofline_guidance_collect_all_memory_levels</id>
+     <text>rec_roofline_guidance_collect_text</text>
+     <title>Collect Roofline for all memory levels </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>17</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>66</unsignedInt:flags>
+   <id>compiler_diag_issue_15335</id>
+   <int:severity>1</int:severity>
+   <text>compiler_diag_issue_15335_text</text>
+   <title>compiler_diag_issue_15335_title</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>compiler_diag_rec_15335</id>
+     <text>compiler_diag_rec_15335_text</text>
+     <title>Recommendations </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>17</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>65</unsignedInt:flags>
+   <id>issue_div</id>
+   <int:severity>1</int:severity>
+   <text>div_issue_text</text>
+   <title>Unoptimized floating point operation processing possible</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_div_c</id>
+     <text>add_div_text</text>
+     <title>Enable the use of approximate division instructions </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_sqrt_c</id>
+     <text>add_sqrt_text</text>
+     <title>Enable the use of approximate sqrt instructions </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>21</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>101</unsignedInt:flags>
+   <id>issue_assumed_dependency</id>
+   <int:severity>2</int:severity>
+   <text>The compiler assumed there is an anti-dependency (Write after read - WAR) or true dependency (Read after write - RAW) in the loop. Improve performance by investigating the assumption and handling accordingly. </text>
+   <title>Assumed dependency present </title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1064</unsignedInt:flags>
+     <id>rec_assumed_dependency_run_correctness_c</id>
+     <text/>
+     <title>Confirm dependency is real </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:no_dependency_disclaimer>true</boolean:no_dependency_disclaimer>
+     </parameters>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>24</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>98</unsignedInt:flags>
+   <id>compiler_diag_issue_15344</id>
+   <int:severity>1</int:severity>
+   <text>compiler_diag_issue_15344_text</text>
+   <title>compiler_diag_issue_15344_title</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>40</unsignedInt:flags>
+     <id>compiler_diag_rec_15344</id>
+     <text>compiler_diag_rec_15344_text</text>
+     <title>Recommendations </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>24</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>101</unsignedInt:flags>
+   <id>issue_assumed_dependency</id>
+   <int:severity>2</int:severity>
+   <text>The compiler assumed there is an anti-dependency (Write after read - WAR) or true dependency (Read after write - RAW) in the loop. Improve performance by investigating the assumption and handling accordingly. </text>
+   <title>Assumed dependency present </title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1064</unsignedInt:flags>
+     <id>rec_assumed_dependency_run_correctness_c</id>
+     <text/>
+     <title>Confirm dependency is real </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:no_dependency_disclaimer>true</boolean:no_dependency_disclaimer>
+     </parameters>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>27</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>98</unsignedInt:flags>
+   <id>compiler_diag_issue_15344</id>
+   <int:severity>1</int:severity>
+   <text>compiler_diag_issue_15344_text</text>
+   <title>compiler_diag_issue_15344_title</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>40</unsignedInt:flags>
+     <id>compiler_diag_rec_15344</id>
+     <text>compiler_diag_rec_15344_text</text>
+     <title>Recommendations </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>27</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>65</unsignedInt:flags>
+   <id>issue_type_conversions</id>
+   <int:severity>1</int:severity>
+   <text>There are multiple data types within loops. Utilize hardware vectorization support more effectively by avoiding data type conversion. </text>
+   <title>Data type conversions present </title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_type_conversions_smallest_c</id>
+     <text>The &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;source loop&lt;/a&gt; contains data types of different widths. To fix: Use the smallest data type that gives the needed precision to use the entire &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;vector register width&lt;/a&gt;.
+&lt;/br&gt;&lt;b&gt;Example:&lt;/b&gt; If only 16-bits are needed, using a short rather than an int can make the difference between eight-way or four-way SIMD parallelism, respectively. </text>
+     <title>Use the smallest data type </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>112</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>578</unsignedInt:flags>
+   <id>compiler_diag_issue_0</id>
+   <int:severity>1</int:severity>
+   <text/>
+   <title/>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations/>
+   <unsignedLong:rowKey>167</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>69</unsignedInt:flags>
+   <id>issue_assumed_dependency</id>
+   <int:severity>2</int:severity>
+   <text>The compiler assumed there is an anti-dependency (Write after read - WAR) or true dependency (Read after write - RAW) in the loop. Improve performance by investigating the assumption and handling accordingly. </text>
+   <title>Assumed dependency present </title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_assumed_dependency_run_correctness_c</id>
+     <text/>
+     <title>Confirm dependency is real </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:no_dependency_disclaimer>true</boolean:no_dependency_disclaimer>
+     </parameters>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>168</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>578</unsignedInt:flags>
+   <id>compiler_diag_issue_0</id>
+   <int:severity>1</int:severity>
+   <text/>
+   <title/>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations/>
+   <unsignedLong:rowKey>168</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>66</unsignedInt:flags>
+   <id>compiler_diag_issue_15344</id>
+   <int:severity>1</int:severity>
+   <text>compiler_diag_issue_15344_text</text>
+   <title>compiler_diag_issue_15344_title</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>compiler_diag_rec_15344</id>
+     <text>compiler_diag_rec_15344_text</text>
+     <title>Recommendations </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>168</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>65</unsignedInt:flags>
+   <id>issue_peel_remainder</id>
+   <int:severity>3</int:severity>
+   <text>All or some &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;source loop&lt;/a&gt; iterations are not executing in the &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;loop body&lt;/a&gt;. Improve performance by moving source loop iterations from &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;peeled&lt;/a&gt;/&lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;remainder&lt;/a&gt; loops to the loop body. </text>
+   <title>Ineffective peeled/remainder loop(s) present </title>
+   <attributes>
+    <float:impact>0</float:impact>
+    <float:severity>3</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>3</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_peel_remainder_omp_simd_modifier_c</id>
+     <text>The loop is threaded and vectorized using the &lt;div class=&quot;inplace_sample&quot;&gt;#pragma omp parallel for simd&lt;/div&gt; directive, which parallelizes the loop with both threads and SIMD instructions. Specifically, the directive divides loop iterations into chunks (subsets) and distributes the chunks among threads, then chunk iterations execute concurrently using SIMD instructions. In this case, the chunk size (number of iterations per chunk) is not a multiple of &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;vector length&lt;/a&gt;. To fix: Add a &lt;div class=&quot;inplace_sample&quot;&gt;schedule (simd: [kind])&lt;/div&gt; modifier to the &lt;div class=&quot;inplace_sample&quot;&gt;#pragma omp parallel for simd&lt;/div&gt; directive.&lt;br/&gt; &lt;b&gt;Example:&lt;/b&gt; Guarantee a multiple of &lt;a href=&quot;https://software.intel.com/en-us/articles/intel-advisor-xe-2016-vectorization-advisor-glossary&quot;&gt;vector length&lt;/a&gt;.&lt;br/&gt; &lt;div class=&quot;sample&quot;&gt;void f(int a[], int b[], int[c])&lt;br/&gt; {&lt;br/&gt; &amp;nbsp;&amp;nbsp;#pragma omp parallel for simd schedule(simd: static)&lt;br/&gt; &amp;nbsp;&amp;nbsp;for (int i = 0; i &lt; n; i++) &lt;br/&gt; &amp;nbsp;&amp;nbsp;{&lt;br/&gt; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;a[i] = b[i] + c[i];&lt;br/&gt; &amp;nbsp;&amp;nbsp;}&lt;br/&gt; }&lt;/div&gt; &lt;b&gt;Read More:&lt;/b&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;http://www.openmp.org/mp-documents/openmp-4.5.pdf&quot;&gt;OpenMP Application Programming Interface &lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;https://software.intel.com/en-us/vectorization-resources-advisor&quot;&gt;Vectorization Resources for Intel&amp;reg; Advisor Users&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; </text>
+     <title>Change the chunk size </title>
+     <attributes>
+      <float:confidence>3</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>170</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>69</unsignedInt:flags>
+   <id>issue_check_access_patterns</id>
+   <int:severity>2</int:severity>
+   <text>Inefficient memory access patterns may result in significant vector code execution slowdown or block automatic vectorization by the compiler. Improve performance by investigating. </text>
+   <title>Possible inefficient memory access patterns present </title>
+   <attributes>
+    <float:severity>2</float:severity>
+   </attributes>
+   <parameters>
+    <int:impure_presence>1</int:impure_presence>
+    <int:all_children>2</int:all_children>
+    <int:children_w_rec>1</int:children_w_rec>
+   </parameters>
+   <recommendations>
+    <recommendation>
+     <int:confidence>2</int:confidence>
+     <unsignedInt:flags>1032</unsignedInt:flags>
+     <id>rec_check_access_patterns_run_map_c</id>
+     <text>There is no confirmation inefficient memory access patterns are present. To confirm: Run a &lt;a href=&quot;../help/index.htm#GUID-B98AD81B-4946-4E86-B452-9A1810F4517C.htm&quot;&gt;Memory Access Patterns analysis&lt;/a&gt;. </text>
+     <title>Confirm inefficient memory access patterns </title>
+     <attributes>
+      <float:confidence>2</float:confidence>
+     </attributes>
+     <parameters>
+      <boolean:no_map_disclaimer>true</boolean:no_map_disclaimer>
+     </parameters>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>170</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>578</unsignedInt:flags>
+   <id>compiler_diag_issue_0</id>
+   <int:severity>1</int:severity>
+   <text/>
+   <title/>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations/>
+   <unsignedLong:rowKey>170</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>65</unsignedInt:flags>
+   <id>issue_div</id>
+   <int:severity>1</int:severity>
+   <text>div_issue_text</text>
+   <title>Unoptimized floating point operation processing possible</title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters/>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_sqrt_c</id>
+     <text>add_sqrt_text</text>
+     <title>Enable the use of approximate sqrt instructions </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>170</unsignedLong:rowKey>
+  </issue>
+  <issue>
+   <unsignedInt:flags>65</unsignedInt:flags>
+   <id>issue_fma</id>
+   <int:severity>1</int:severity>
+   <text>Your current hardware supports the AVX2 instruction set architecture (ISA), which enables the use of fused multiply-add (FMA) instructions. Improve performance by utilizing FMA instructions. </text>
+   <title>Potential underutilization of FMA instructions </title>
+   <attributes>
+    <float:severity>1</float:severity>
+   </attributes>
+   <parameters>
+    <int:impure_presence>1</int:impure_presence>
+    <int:all_children>2</int:all_children>
+    <int:children_w_rec>1</int:children_w_rec>
+   </parameters>
+   <recommendations>
+    <recommendation>
+     <int:confidence>1</int:confidence>
+     <unsignedInt:flags>8</unsignedInt:flags>
+     <id>rec_fma_target_avx2_isa_c</id>
+     <text>Although static analysis presumes the loop may benefit from FMA instructions available with the AVX2 ISA, no AVX2-specific code executed for this loop. To fix: Use the &lt;div class=&quot;inplace_sample&quot;&gt;xCORE-AVX2&lt;/div&gt; compiler option to generate AVX2-specific code, or the &lt;div class=&quot;inplace_sample&quot;&gt;axCORE-AVX2&lt;/div&gt; compiler option to enable multiple, feature-specific, auto-dispatch code generation, including AVX2. &lt;table&gt; &lt;tr&gt; &lt;th&gt; Windows* OS &lt;/th&gt; &lt;th&gt; Linux* OS &lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;/QxCORE-AVX2 or /QaxCORE-AVX2&lt;/td&gt; &lt;td&gt;-xCORE-AVX2 or -axCORE-AVX2&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; &lt;b&gt;Read More: &lt;/b&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;C++/17/index.htm#GUID-2D881A91-C5D7-4DDD-84B1-FB9D0D597F4D.htm&quot;&gt;ax, Qax&lt;/a&gt;; &lt;a href=&quot;C++/17/index.htm#GUID-09734487-1819-4C1E-B314-2497F2B64C45.htm&quot;&gt;x, Qx&lt;/a&gt;
+&lt;li&gt;&lt;em&gt;Code Generation Options&lt;/em&gt; in the &lt;a href=&quot;https://software.intel.com/en-us/intel-cplusplus-compiler-16.0-user-and-reference-guide&quot;&gt;Intel&amp;reg; C++ Compiler 16.0 User and Reference Guide&lt;/a&gt; &lt;li&gt;&lt;a href=&quot;https://software.intel.com/en-us/blogs/2016/01/13/compiling-for-the-intel-xeon-phi-processor-x200-and-the-intel-avx-512-isa&quot;&gt;Compiling for the Intel&amp;reg; Xeon Phi&amp;trade; processor x200 and the Intel&amp;reg; AVX-512 ISA&lt;/a&gt; and &lt;a href=&quot;https://software.intel.com/en-us/vectorization-resources-advisor&quot;&gt;Vectorization Resources for Intel&amp;reg; Advisor Users&lt;/a&gt; &lt;/ul&gt; </text>
+     <title>Target the AVX2 ISA </title>
+     <attributes>
+      <float:confidence>1</float:confidence>
+     </attributes>
+     <parameters/>
+    </recommendation>
+   </recommendations>
+   <unsignedLong:rowKey>170</unsignedLong:rowKey>
+  </issue>
+ </issues>
+ <traits>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>13</int:id>
+   <text>System Function Calls Present </text>
+   <unsignedLong:rowKey>1</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>13</int:id>
+   <text>System Function Calls Present </text>
+   <unsignedLong:rowKey>2</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>14</int:id>
+   <text>Indirect Function Calls Present </text>
+   <unsignedLong:rowKey>2</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>13</int:id>
+   <text>System Function Calls Present </text>
+   <unsignedLong:rowKey>4</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>14</int:id>
+   <text>Indirect Function Calls Present </text>
+   <unsignedLong:rowKey>4</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>153</int:fieldId>
+   <int:id>6</int:id>
+   <text>Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>6</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>155</int:fieldId>
+   <int:id>7</int:id>
+   <text>Average Iteration Duration Issue (Expand Trip Counts Column To Check Exact Duration Value) 
+Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>6</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>153</int:fieldId>
+   <int:id>6</int:id>
+   <text>Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>10</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>155</int:fieldId>
+   <int:id>7</int:id>
+   <text>Average Iteration Duration Issue (Expand Trip Counts Column To Check Exact Duration Value) 
+Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>10</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>44</int:fieldId>
+   <int:id>2</int:id>
+   <text>Irregular Memory Access Patterns May Decrease Performance 
+Suggestion: See Recommendations Tab </text>
+   <unsignedLong:rowKey>12</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>153</int:fieldId>
+   <int:id>6</int:id>
+   <text>Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>16</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>155</int:fieldId>
+   <int:id>7</int:id>
+   <text>Average Iteration Duration Issue (Expand Trip Counts Column To Check Exact Duration Value) 
+Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>16</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>153</int:fieldId>
+   <int:id>6</int:id>
+   <text>Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>17</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>155</int:fieldId>
+   <int:id>7</int:id>
+   <text>Average Iteration Duration Issue (Expand Trip Counts Column To Check Exact Duration Value) 
+Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>17</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>44</int:fieldId>
+   <int:id>2</int:id>
+   <text>Irregular Memory Access Patterns May Decrease Performance 
+Suggestion: See Recommendations Tab </text>
+   <unsignedLong:rowKey>21</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>14</int:id>
+   <text>Indirect Function Calls Present </text>
+   <unsignedLong:rowKey>110</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>14</int:id>
+   <text>Indirect Function Calls Present </text>
+   <unsignedLong:rowKey>114</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>0</int:fieldId>
+   <int:id>14</int:id>
+   <text>Indirect Function Calls Present </text>
+   <unsignedLong:rowKey>117</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>153</int:fieldId>
+   <int:id>6</int:id>
+   <text>Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>168</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>155</int:fieldId>
+   <int:id>7</int:id>
+   <text>Average Iteration Duration Issue (Expand Trip Counts Column To Check Exact Duration Value) 
+Low Iteration Duration Makes This Loop a Better Candidate for Vectorization Parallelism Than Threading Parallelism </text>
+   <unsignedLong:rowKey>168</unsignedLong:rowKey>
+  </trait>
+  <trait>
+   <int:fieldId>44</int:fieldId>
+   <int:id>2</int:id>
+   <text>Irregular Memory Access Patterns May Decrease Performance 
+Suggestion: See Recommendations Tab </text>
+   <unsignedLong:rowKey>170</unsignedLong:rowKey>
+  </trait>
+ </traits>
+</bag>

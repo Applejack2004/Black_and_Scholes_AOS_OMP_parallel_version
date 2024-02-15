@@ -8,7 +8,7 @@ public:
 	{
 		
 		
-#pragma omp parallel num_threads(12)
+#pragma omp parallel 
 		{
 			std::default_random_engine rd(0);//генератор случайных чисел
 			std::uniform_real_distribution<float> dist1(10.0f, 100.0f);

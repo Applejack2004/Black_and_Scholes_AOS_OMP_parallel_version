@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="C:\Users\4885226\source\repos\B&amp;S_AOS\B&amp;S_AOS\Option.cpp"
+           line_no="15"
+           routine="main$omp$parallel@12"
+           is_vectorized="1"
+           self_time="5.877738E-01"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="170"
+           priority="0">
+           <recommendation id="rec_peel_remainder_omp_simd_modifier_c" title="Change the chunk size" confidence="3" gain="-1"/>
+  </hotspot>
+  <hotspot filename="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\random"
+           line_no="17"
+           routine="Functor_for_array::operator()$omp$parallel@11"
+           is_vectorized="0"
+           self_time="1.023501E+00"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="9"
+           priority="0">
+           <recommendation id="rec_type_conversions_smallest_c" title="Use the smallest data type" confidence="1" gain="-1"/>
+  </hotspot>
+  <hotspot filename="C:\Users\4885226\source\repos\B&amp;S_AOS\B&amp;S_AOS\Option.cpp"
+           line_no="15"
+           routine="main$omp$parallel@12"
+           is_vectorized="1"
+           self_time="5.877738E-01"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="170"
+           priority="0">
+           <recommendation id="rec_sqrt_c" title="Enable the use of approximate sqrt instructions" confidence="1" gain="-1"/>
+  </hotspot>
+  <hotspot filename="C:\Users\4885226\source\repos\B&amp;S_AOS\B&amp;S_AOS\Option.cpp"
+           line_no="15"
+           routine="main$omp$parallel@12"
+           is_vectorized="1"
+           self_time="5.877738E-01"
+           total_time="0.000000E+00"
+           trip_counts=""
+           func_instance="170"
+           priority="0">
+           <recommendation id="rec_fma_target_avx2_isa_c" title="Target the AVX2 ISA" confidence="1" gain="-1"/>
+  </hotspot>
+</IntelParallelAdvisorSummary >

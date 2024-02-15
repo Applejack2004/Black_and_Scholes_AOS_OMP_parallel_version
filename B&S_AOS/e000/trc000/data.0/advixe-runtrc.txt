@@ -1,0 +1,10 @@
+
+=== Start: [2023/12/15 01:23:53] === 
+Peak bandwidth measurement started...
+Peak bandwidth measurement finished.
+Analysis started...
+Result file: C:\Users\4885226\source\repos\B&S_AOS\B&S_AOS\e000\trc000\trc000.advixe 
+Application exit code: 0 
+Result file: C:\Users\4885226\source\repos\B&S_AOS\B&S_AOS\e000\trc000\trc000.advixe 
+Analysis completed
+=== End: [2023/12/15 01:24:24] === 
